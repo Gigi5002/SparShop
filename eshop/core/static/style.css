@@ -1,0 +1,38 @@
+/* nav {
+    background-color: black;
+    color: #eee;
+    padding: 10px 0 10px 5px;
+    box-sizing: border-box;
+}
+
+nav a {
+    text-decoration: none;
+    color: #eee;
+    margin-right: 10px;
+} */
+
+/* nav a:hover {
+    background-color: darkblue;
+} */
+
+.cabinet-link {
+    background-color: aqua;
+    border: 1px solid aqua;
+    border-radius: 6px;
+    width: 100px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.cabinet-link a {
+    color: black;
+    text-decoration: none;
+}
+
+.bg-primary {
+    background-color: rgb(6 62 144) !important;
+}
+
+.news-list {
+    gap: 5px;
+}

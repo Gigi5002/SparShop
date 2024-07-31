@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Личный кабинет</h1>
+<h2>{{ user }}</h2>
+<div>Логин: {{ user.username }}</div>
+<div>Является сотруников: {{ user.is_staff }}</div>
+{% if user.profile %}
+    <div>Биография: {{ user.profile.bio }}</div>
+    {% if user.profile.photo %}
+        <p>
+            <img src="/media/{{ user.profile.photo }}" alt="" height="250px">
+        </p>
+        <p>
+            <img src="{{ user.profile.photo.url }}" alt="" height="250px">
+        </p>
+    {% endif %}
+    <a class="btn btn-warning" href="{% url 'profile-update' user.profile.id %}">Изменить</a>
+{% endif %}
+{% endblock %}
