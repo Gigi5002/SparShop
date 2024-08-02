@@ -16,8 +16,8 @@ nav a {
 } */
 
 .cabinet-link {
-    background-color: aqua;
-    border: 1px solid aqua;
+    background-color: gray;
+    border: 1px solid gray;
     border-radius: 6px;
     width: 100px;
     text-align: center;

@@ -8,7 +8,7 @@ class DatePicker(forms.DateInput):
 
 
 class ProductForm(forms.ModelForm):
-    quarantee = forms.DateField(
+    guarantee = forms.DateField(
         widget=DatePicker,
         label='Последний день гарантии',
         required=False,

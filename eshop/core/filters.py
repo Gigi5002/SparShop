@@ -5,19 +5,20 @@ from .forms import DatePicker
 
 class ProductFilter(django_filters.FilterSet):
     name = django_filters.CharFilter(
-        lookup_expr='icontains',
-        label='Название'
+        lookup_expr="icontains",
+        label="Название"
     )
     price__gte = django_filters.NumberFilter(
-        fields_name='price',
-        lookup_expr='gte',
-        label='Цена, от'
+        field_name='price',
+        lookup_expr="gte",
+        label="Цена, от"
     )
     price__lte = django_filters.NumberFilter(
-        fields_name='price',
-        lookup_expr='lte',
-        label='Цена, до'
+        field_name='price',
+        lookup_expr="lte",
+        label="Цена, до"
     )
+
     guarantee__lt = django_filters.DateFilter(
         field_name='guarantee',
         lookup_expr='lt',
@@ -31,3 +32,4 @@ class ProductFilter(django_filters.FilterSet):
             'price__gte', 'price__lte',
             'guarantee__lt',
         ]
+
