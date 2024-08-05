@@ -176,7 +176,7 @@ def registration(request):
 
     if request.method == "POST":
         # create user object
-        reg_form = RegistrationForm(request.POST)
+        reg_form = RegistrationsForm(request.POST)
         if reg_form.is_valid():
             user_object = reg_form.save()
             password = request.POST["password"]
@@ -185,7 +185,7 @@ def registration(request):
             return redirect('/')
         return HttpResponse("Ошибка валидации")
 
-    reg_form = RegistrationForm()
+    reg_form = RegistrationsForm()
     context["reg_form"] = reg_form
     return render(request, 'profile/registration.html', context)
 
